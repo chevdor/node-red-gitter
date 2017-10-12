@@ -1,0 +1,34 @@
+<script type="text/javascript">
+
+RED.nodes.registerType('Gitter', {
+    category: 'Gitter',
+    color: '#D8BFD8',
+    inputs: 1,
+    outputs: 1,
+    icon: "gitter.png",
+    label: function() {
+        return this.name || "Gitter";
+    },
+    defaults: {
+        apiconfig: { value: '', type: 'gitter-config' },
+        channel: { value: 'gitterhq/sandbox', type: 'string' }
+    }
+});
+</script>
+<script type="text/x-red" data-template-name="Gitter">
+    <div class="form-row">
+        <label for="node-input-apiconfig"><i class="icon-tag"></i> Config</label>
+        <input type="text" id="node-input-apiconfig">
+    </div>
+     <div class="form-row">
+        <label for="node-input-channel"><i class="icon-tag"></i> Channel</label>
+        <input type="text" id="node-input-channel" placeholder="Name">
+    </div>
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+</script>
+<script type="text/x-red" data-help-name="Gitter">
+    <p>Gitter node.</p>
+</script>

@@ -1,0 +1,26 @@
+<script type="text/javascript">
+RED.nodes.registerType('gitter-config', {
+    category: 'config',
+    icon: "gitter.png",
+    label: function() {
+        return this.network;
+    },
+    defaults: {
+        api: { value: {} },
+        // token: {value:"YourApiKey", required:true}
+    },
+    credentials: {
+        token: {type: 'password'}
+    },
+});
+</script>
+<script type="text/x-red" data-template-name="gitter-config">
+    <p>You can grab your token at <a href="https://developer.gitter.im/apps">https://developer.gitter.im/apps</a></p>
+    <div class="form-row">
+        <label for="node-input-token"><i class="icon-bookmark"></i> API Key</label>
+        <input type="password" id="node-input-token">
+    </div>
+</script>
+<script type="text/x-red" data-help-name="gitter-config">
+    <p>Gitter node.</p>
+</script>
